@@ -39,7 +39,7 @@ import com.ecwid.mailchimp.method.v1_3.list.ShortMemberInfo;
 public class EvaluationMailSyncer {
 	
 	static private Log log = LogFactory.getLog(EvaluationMailSyncer.class);
-	static private enum CurrentChallenges { OF, PROSTATE, SMC_RNA, SMC_HET, NCI_U4C }; //OF, PROSTATE, SMC_RNA, SMC_HET, NCI_U4C
+	static private enum CurrentChallenges { OF, PROSTATE, SMC_RNA, SMC_HET, NCI_U4C, ALS2}; //OF, PROSTATE, SMC_RNA, SMC_HET, NCI_U4C
 	static private final String OVERALL_DREAM_MAILCHIMP_LIST_ID = "8ef794accf";
 	
 	String mailChimpApiKey;
@@ -69,6 +69,7 @@ public class EvaluationMailSyncer {
 		approvedUserEmails.put(CurrentChallenges.SMC_RNA, new HashSet<String>());
 		approvedUserEmails.put(CurrentChallenges.SMC_HET, new HashSet<String>());
 		approvedUserEmails.put(CurrentChallenges.NCI_U4C, new HashSet<String>());
+		approvedUserEmails.put(CurrentChallenges.ALS2, new HashSet<String>());
 		
 		challengeToMailChimpId = new HashMap<EvaluationMailSyncer.CurrentChallenges, String>();
 		challengeToMailChimpId.put(CurrentChallenges.OF, "af01a70584");
@@ -76,6 +77,7 @@ public class EvaluationMailSyncer {
 		challengeToMailChimpId.put(CurrentChallenges.SMC_RNA, "27acbde7c3");
 		challengeToMailChimpId.put(CurrentChallenges.SMC_HET, "eb5f5b97c7");
 		challengeToMailChimpId.put(CurrentChallenges.NCI_U4C, "e3f872cdab");
+		challengeToMailChimpId.put(CurrentChallenges.ALS2, "e306be8654");
 
 		challengeToApprovedTeamIds = new HashMap<EvaluationMailSyncer.CurrentChallenges, List<String>>();
 		challengeToApprovedTeamIds.put(CurrentChallenges.OF, Arrays.asList(new String[]{ "3323870" }));
@@ -83,6 +85,7 @@ public class EvaluationMailSyncer {
 		challengeToApprovedTeamIds.put(CurrentChallenges.SMC_RNA, Arrays.asList(new String[]{ EMPTY_TEAM }));
 		challengeToApprovedTeamIds.put(CurrentChallenges.SMC_HET, Arrays.asList(new String[]{ EMPTY_TEAM }));
 		challengeToApprovedTeamIds.put(CurrentChallenges.NCI_U4C, Arrays.asList(new String[]{ "3325803" }));
+		challengeToApprovedTeamIds.put(CurrentChallenges.ALS2, Arrays.asList(new String[]{ EMPTY_TEAM }));
 
 		challengeToUnapprovedMailChimpId = new HashMap<EvaluationMailSyncer.CurrentChallenges, String>();
 		challengeToUnapprovedMailChimpId.put(CurrentChallenges.OF, "14dc8fa7b0");
@@ -90,6 +93,7 @@ public class EvaluationMailSyncer {
 		challengeToUnapprovedMailChimpId.put(CurrentChallenges.SMC_RNA, "c5d573ace9");
 		challengeToUnapprovedMailChimpId.put(CurrentChallenges.SMC_HET, "5da47633f5");
 		challengeToUnapprovedMailChimpId.put(CurrentChallenges.NCI_U4C, "a2df0ea701");
+		challengeToUnapprovedMailChimpId.put(CurrentChallenges.ALS2, "85104d6b1b");
 		
 		challengeToAllRegisteredTeamId = new HashMap<EvaluationMailSyncer.CurrentChallenges, String>();
 		challengeToAllRegisteredTeamId.put(CurrentChallenges.OF, "3323411");
@@ -97,6 +101,7 @@ public class EvaluationMailSyncer {
 		challengeToAllRegisteredTeamId.put(CurrentChallenges.SMC_RNA, "3323393");
 		challengeToAllRegisteredTeamId.put(CurrentChallenges.SMC_HET, "3323392");
 		challengeToAllRegisteredTeamId.put(CurrentChallenges.NCI_U4C, "3325804");
+		challengeToAllRegisteredTeamId.put(CurrentChallenges.ALS2, "3328414");
 		
 	}
 
