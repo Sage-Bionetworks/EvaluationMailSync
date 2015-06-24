@@ -85,7 +85,7 @@ public class EvaluationMailSyncer {
 		challengeToApprovedTeamIds.put(CurrentChallenges.SMC_RNA, Arrays.asList(new String[]{ EMPTY_TEAM }));
 		challengeToApprovedTeamIds.put(CurrentChallenges.SMC_HET, Arrays.asList(new String[]{ EMPTY_TEAM }));
 		challengeToApprovedTeamIds.put(CurrentChallenges.NCI_U4C, Arrays.asList(new String[]{ "3325803" }));
-		challengeToApprovedTeamIds.put(CurrentChallenges.ALS2, Arrays.asList(new String[]{ EMPTY_TEAM }));
+		challengeToApprovedTeamIds.put(CurrentChallenges.ALS2, Arrays.asList(new String[]{ "3328255" }));
 
 		challengeToUnapprovedMailChimpId = new HashMap<EvaluationMailSyncer.CurrentChallenges, String>();
 		challengeToUnapprovedMailChimpId.put(CurrentChallenges.OF, "14dc8fa7b0");
