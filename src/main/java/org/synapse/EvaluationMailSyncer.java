@@ -32,7 +32,7 @@ import com.ecwid.mailchimp.method.v1_3.list.ShortMemberInfo;
 public class EvaluationMailSyncer {
 	
 	static private Log log = LogFactory.getLog(EvaluationMailSyncer.class);
-	static private final String OVERALL_DREAM_MAILCHIMP_LIST_ID = "6abd850dde";
+	static private final String OVERALL_DREAM_MAILCHIMP_LIST_ID = "8ef794accf";
 	
 	String mailChimpApiKey;
 	MailChimpClient mailChimpClient;
